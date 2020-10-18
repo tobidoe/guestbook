@@ -25,3 +25,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     Route::get('/guestbook', function () {
         return view('guestbook');
     })->middleware('auth');
+
+
