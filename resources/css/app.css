@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*
+Hat an dieser Stelle keine Auswirkung?:
+
+#menuLandingPage{
+    display:none;
+}
+*/
+
