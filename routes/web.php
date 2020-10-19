@@ -33,6 +33,3 @@ Route::get('/guestbook', 'App\Http\Controllers\PostsController@showAllPosts')
 //Automatisches Anlegen von Einträgen
     Route::get('/guestbook/generatePosts', 'App\Http\Controllers\PostsController@generatePosts')
         ->middleware('auth');
-
-
-3

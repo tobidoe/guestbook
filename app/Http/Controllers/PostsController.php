@@ -34,7 +34,7 @@
         {
             $quantity = request('quantityOfPosts');
             $text = file_get_contents('http://loripsum.net/api/1/medium/plaintext');
-            for ($i = 0; $i < $quantity; $i++) 3{
+            for ($i = 0; $i < $quantity; $i++) {
                 $post = new Post;
                 $post->post = $text;
                 $post->user_id = Auth::id();

@@ -7,7 +7,7 @@
 
     </head>
     <body>
-        <h1>Gästebuch</h1>
+
 
         <div class="generatePosts">
             <h3>Entwickleroptionen:</h3>
@@ -20,8 +20,10 @@
                 <input type="submit" value="Anlegen">
             </form>
         </div>
+        <hr>
         <br>
         <br>
+        <h1>Gästebuch</h1>
 
         <div class="newPost">
             <form action="/guestbook/newPost" method="post">
