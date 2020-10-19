@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,9 +22,17 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+//Anzeigen aller Posts
+Route::get('/guestbook', 'App\Http\Controllers\PostsController@showAllPosts')
+    ->middleware('auth');
 
-    Route::get('/guestbook', function () {
-        return view('guestbook');
-    })->middleware('auth');
+//Anlegen eines neuen Eintrags
+    Route::post('/guestbook/newPost', 'App\Http\Controllers\PostsController@insertNewPost')
+        ->middleware('auth');
+
+//Automatisches Anlegen von Einträgen
+    Route::get('/guestbook/generatePosts', 'App\Http\Controllers\PostsController@generatePosts')
+        ->middleware('auth');
 
 
+3

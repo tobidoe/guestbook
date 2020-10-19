@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="457163c2-033a-4331-9322-97f43e0efd83" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/guestbook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guestbook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/landingPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landingPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,6 +172,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.webOptions" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -188,7 +190,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602937777222</updated>
       <workItem from="1602937779265" duration="11189000" />
-      <workItem from="1603023320953" duration="9153000" />
+      <workItem from="1603023320953" duration="11237000" />
+      <workItem from="1603094807455" duration="21370000" />
     </task>
     <servers />
   </component>
@@ -205,15 +208,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2565" y="-975" key="NewPhpFileDialog" timestamp="1603024576755">
       <screen x="-3840" y="-1419" width="1920" height="1040" />
     </state>
     <state x="-2565" y="-975" key="NewPhpFileDialog/0.0.1280.680/-3840.-1419.1920.1040@-3840.-1419.1920.1040" timestamp="1603024576755" />
-    <state x="-2738" y="-1190" width="672" height="678" key="search.everywhere.popup" timestamp="1602947561142">
+    <state x="-2914" y="-1253" key="SettingsEditor" timestamp="1603119721489">
       <screen x="-3840" y="-1419" width="1920" height="1040" />
     </state>
-    <state x="-2738" y="-1190" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/-3840.-1419.1920.1040@-3840.-1419.1920.1040" timestamp="1602947561142" />
+    <state x="-2914" y="-1253" key="SettingsEditor/0.0.1280.680/-3840.-1419.1920.1040@-3840.-1419.1920.1040" timestamp="1603119721489" />
+    <state x="-2738" y="-1190" width="672" height="678" key="search.everywhere.popup" timestamp="1603099634847">
+      <screen x="-3840" y="-1419" width="1920" height="1040" />
+    </state>
+    <state x="-2738" y="-1190" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/-3840.-1419.1920.1040@-3840.-1419.1920.1040" timestamp="1603099634847" />
   </component>
 </project>
