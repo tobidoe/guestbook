@@ -29,6 +29,23 @@
             return redirect('/guestbook');
         }
 
+        //todo: try this - why does this not work, yet?
+        //can you make it work?
+//        public function insertNewPost(Request $request)
+//        {
+//            auth()->user()->posts()->create($request->all());
+              //todo: Why is calling auth()->user()->posts().. safer than referencing Auth::id(). In which use case might this lead to a problem?
+//            return redirect('/guestbook');
+//        }
+
+
+
+        //todo: What happens when loripsum is down?
+        //can you rebuild it without an outbound http request?
+        //can you rebuild it such that each post looks differently?
+        //tip: Check out model factories
+
+
         //Automatisches Generieren und Anlegen von Einträgen
         public function generatePosts()
         {
