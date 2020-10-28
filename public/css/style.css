@@ -1,0 +1,34 @@
+*{
+    //border:solid;
+}
+
+a{
+    margin:2px;
+}
+
+.post {
+    background-color: #a2b6d6;
+    padding: 1px 10px 1px 10px;
+    border-radius: 5px;
+    margin: 20px 10px 20px 10px;
+}
+
+.post_header{
+    font-size: 90%;
+    font-style: italic;
+    margin: 0px;
+
+}
+
+.post_footer{
+    margin: 0px;
+    text-align: right;
+
+
+}
+
+h1{
+    text-align: center;
+}
+
+
