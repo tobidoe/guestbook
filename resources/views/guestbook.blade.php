@@ -2,21 +2,19 @@
 
 {{--  comment: extract this to a layout  --}}
 
-    <!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}"> {{--        is queried by javascript functions in script.js--}}
-        <title>Titel</title>
-        <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}"/>
-        <script src="/js/script.js"></script>
+@extends('layouts.main')
 
-    </head>
+@section('content')
 
-    <body>
+
+
 
         <h3>Entwickleroptionen:</h3>
+
+        <div class="m-4 p-4 bg-red-200  rounded-lg shadow-md">
+            <h4 class="font-bold text-lg py-2">Titel</h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt dolores est eum exercitationem illo ipsa quam quis similique tempore!
+        </div>
 
 {{--        adds a form for autogeneration of posts--}}
         <div class="generatePosts">
@@ -77,12 +75,21 @@
 
         <br>
         <br>
+@foreach($posts as $post)
+    <div class="m-4 p-2 rounded bg-green-100 shadow-md">
+        Beitrag von {{$post->user->name}}
+        <div>
+            {{$post->post}}
+        </div>
+        @foreach($post->childs as $childPost)
 
+        @endforeach
+    </div>
+@endforeach
 
 {{--        displays posts, structure depending on post/answer hierarchy and nesting depth--}}
         <?php showNestedPosts(); ?>
 
-    </body>
-</html>
+@endsection
 
 

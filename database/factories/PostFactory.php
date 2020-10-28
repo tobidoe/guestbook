@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
@@ -24,7 +25,7 @@ class PostFactory extends Factory
         return [
             'post' => $this->faker->text,
             // comment A factory should be auth-agnostic. Frequently you run factories from the console - there won't be a user
-            'user_id' => auth()->user()->id,
+            'user_id' => User::factory()->create()->id,
         ];
     }
 }

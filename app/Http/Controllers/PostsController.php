@@ -20,14 +20,14 @@
                 ->get();
 
             //comment: view doesn't need slashes. It uses dot-syntax
-            return view('/guestbook', ['posts' => $posts]);  //todo: delete second parameter?
+            return view('guestbook', ['posts' => $posts]);  //todo: delete second parameter?
         }
 
         //inserts new post into database
         public function insertNewPost(Request $request)
         {
             //comment: Never use echo. What is the result of ->create(...), anyways ?
-            echo auth()->user()->posts()->create($request->except('_token'));
+            auth()->user()->posts()->create($request->except('_token'));
             //comment: Use redirect()->back() instead
             return redirect('/guestbook');
         }
@@ -91,7 +91,6 @@
             } else {
                 $post->delete();
             }
-            //comment: Why not leveraging the sql constraints?
 
             //comment: redirect()->back();
             return redirect('/guestbook');

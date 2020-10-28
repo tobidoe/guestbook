@@ -27,4 +27,10 @@ class Post extends Model
     public function childs(){
         return $this->hasMany('App\Models\Post');
     }
+
+    public function deleteRecursively()
+    {
+        $this->childs->each->deleteRecursively();
+        $this->delete();
+    }
 }
