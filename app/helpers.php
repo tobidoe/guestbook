@@ -1,5 +1,8 @@
 <?php
 
+//comment Never use helper functions unless you exactly know what you are doing
+// If you feel the need to build a helper function, then probably you miss something
+
     use App\Models\Post;
     use Illuminate\Support\Collection;
 
@@ -19,6 +22,8 @@
 
                 //displays associated answer(s)
                 if ($post->childs()->get()->isNotEmpty()) {    //todo: unnecessary expensive because of two queries?
+                    //comment: YES it is expensive. Use prop-calls (i.e. $post->childs instead of $post->childs() )
+                    // and/or eager loading instead
                     showChilds($post->childs()->get());
                 }
             }
@@ -43,6 +48,10 @@
 
     }
 
+
+
+//comment: e.g. if your function is responsible for displaying something (like showing post)
+// you should use a (blade)-template instead.
 
     //echoes post in correspondending html structure
     function showPost($post, $nestingDepth = 0)
@@ -69,6 +78,7 @@
 
 
         //echoes edit and delete hrefs if post was created by currently active user
+        //comment: Again its better to use auth()->user()->is($post->user)
         if ($post->user_id == Auth::id()) {
             echo '
                     <a href="javascript:showFormEditPost(' . $post->id . ')" >Ändern</a>

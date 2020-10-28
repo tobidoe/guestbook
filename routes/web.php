@@ -25,6 +25,8 @@
     })->name('dashboard');
 
 
+    //comment: All the routes use the same middleware -> use route grouping
+
     //display posts
     Route::get('/guestbook', 'App\Http\Controllers\PostsController@showAllPosts')
         ->middleware('auth');

@@ -1,3 +1,5 @@
+//comment: Don't use public folder to create styles. Use frontend compilation instead.
+// Do not use js-generated html by hand.
 
 //replaces post with form for editing current post
 function showFormEditPost(post_id) {

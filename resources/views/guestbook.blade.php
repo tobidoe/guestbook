@@ -1,5 +1,7 @@
 <?php require(app_path() . '/helpers.php'); ?>
 
+{{--  comment: extract this to a layout  --}}
+
     <!DOCTYPE html>
 <html lang="de">
     <head>

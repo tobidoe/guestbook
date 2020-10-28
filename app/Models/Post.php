@@ -9,6 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
+    //comment: Why is user_id fillable?
     protected $fillable = ['post','user_id', 'post_id'];
 
 
@@ -21,6 +22,7 @@ class Post extends Model
         return $this->belongsTo('App\Models\Post','post_id');
     }
 
+    //comment: Children!
     //references to itself for creating post/answer-hierarchy
     public function childs(){
         return $this->hasMany('App\Models\Post');

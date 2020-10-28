@@ -1,3 +1,9 @@
+/*comment: Don't use public folder to create styles. Use frontend compilation instead
+   and lets use tailwind css
+*/
+
+
+
 *{
     //border:solid;
 }
