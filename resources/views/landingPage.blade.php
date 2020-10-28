@@ -27,6 +27,7 @@
             <div class="begruessung" style="float:none">
                 <h1>Willkommen zu Tobis Gästebuch</h1>
 
+
             </div>
 
             @if (Route::has('login'))
