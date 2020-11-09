@@ -25,26 +25,33 @@
     })->name('dashboard');
 
 
-    //display posts
-    Route::get('/guestbook', 'App\Http\Controllers\PostsController@showAllPosts')
-        ->middleware('auth');
+    Route::middleware('auth')->group(function () {
 
-    //inserts new post
-    Route::post('/guestbook/newPost', 'App\Http\Controllers\PostsController@insertNewPost')
-        ->middleware('auth');
 
-    //generates new posts
-    Route::get('/guestbook/generatePosts', 'App\Http\Controllers\PostsController@generatePosts')
-        ->middleware('auth');
+        //display posts
+        Route::get('/guestbook', 'App\Http\Controllers\PostsController@index');
 
-    //deletes all Posts
-    Route::delete('/guestbook/deleteAllPosts', 'App\Http\Controllers\PostsController@deleteAllPosts')
-        ->middleware('auth');
+        //inserts new post
+        Route::post('/guestbook/newPost', 'App\Http\Controllers\PostsController@create');
 
-    //deletes post
-    Route::get('/guestbook/deletePost', 'App\Http\Controllers\PostsController@deletePost')
-        ->middleware('auth');
+        //edits post
+        Route::post('/guestbook/edit', 'App\Http\Controllers\PostsController@edit');
 
-    //edits post
-    Route::post('/guestbook/editPost', 'App\Http\Controllers\PostsController@editPost')
-        ->middleware('auth');
+        //deletes post
+        Route::get('/guestbook/delete', 'App\Http\Controllers\PostsController@delete');
+
+
+
+        //generates new posts
+        Route::get('/guestbook/generatePosts', 'App\Http\Controllers\PostsController@generatePosts');
+
+        //deletes all Posts
+        Route::delete('/guestbook/deleteAllPosts', 'App\Http\Controllers\PostsController@deleteAllPosts');
+
+
+
+
+    });
+
+
+

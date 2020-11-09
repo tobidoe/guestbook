@@ -3,17 +3,17 @@
 function showFormEditPost(post_id) {
 
     var html_form_filler = '<div class="newPost">'+  //todo: is there a better place to put these kind of html constructs?
-        '<form action="/guestbook/editPost" method="post">'+
+        '<form action="/guestbook/edit" method="post">'+
             '<input type="hidden" name="_token" value="'+document.head.querySelector("[id~=csrf-token][content]").content+'">'+  //todo: is there a better way to query the csrf-token?
             '<input type="hidden" name="post_id" value="'+post_id+'">'+
-            '<label for="post">Ändere deinen Eintrag:</label>'+
+            '<label for="body">Ändere deinen Eintrag:</label>'+
             '<br>'+
-                '<textarea id="post" name="post"'+
+                '<textarea id="body" name="body"'+
                           'placeholder="Bis zu 800 Zeichen"'+
                           'rows="10" cols="50"'+
                           'required '+
                           'minlength="5"'+
-                          'maxlength="800">'+document.querySelector("#post"+post_id).innerHTML+'</textarea>'+
+                          'maxlength="800">'+document.querySelector("#body"+post_id).innerHTML+'</textarea>'+
                 '<br>'+
                     '<input type="submit" value="Eintrag ändern">  '+
                     '<a href="/guestbook">Änderung abbrechen</a>'+
@@ -33,9 +33,9 @@ function showFormAnswer(post_id) {
         '<form action="/guestbook/newPost" method="post">'+
             '<input type="hidden" name="_token" value="'+document.head.querySelector("[id~=csrf-token][content]").content+'">'+  //todo: is there a better way to query the csrf-token?
             '<input type="hidden" name="post_id" value="'+post_id+'">'+
-            '<label for="post">Antworte auf diesen Eintrag:</label>'+
+            '<label for="body">Antworte auf diesen Eintrag:</label>'+
             '<br>'+
-                '<textarea id="post" name="post"'+
+                '<textarea id="body" name="body"'+
                           'placeholder="Bis zu 800 Zeichen"'+
                           'rows="10" cols="50"'+
                           'required '+

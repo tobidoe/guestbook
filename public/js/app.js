@@ -13208,7 +13208,7 @@ module.exports = {
      * _.isArray([1, 2, 3]);
      * // => true
      *
-     * _.isArray(document.body.children);
+     * _.isArray(document.body.allChildren_withUser);
      * // => false
      *
      * _.isArray('abc');
@@ -13254,7 +13254,7 @@ module.exports = {
      * _.isArrayLike([1, 2, 3]);
      * // => true
      *
-     * _.isArrayLike(document.body.children);
+     * _.isArrayLike(document.body.allChildren_withUser);
      * // => true
      *
      * _.isArrayLike('abc');
@@ -13283,7 +13283,7 @@ module.exports = {
      * _.isArrayLikeObject([1, 2, 3]);
      * // => true
      *
-     * _.isArrayLikeObject(document.body.children);
+     * _.isArrayLikeObject(document.body.allChildren_withUser);
      * // => true
      *
      * _.isArrayLikeObject('abc');
